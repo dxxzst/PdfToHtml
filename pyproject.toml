@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf_to_html_converter"
+version = "0.1.0"
+authors = [
+  { name="Gemini", email="gemini@google.com" },
+]
+description = "A tool to convert PDF files to high-fidelity HTML."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "PyMuPDF>=1.23.0",
+    "beautifulsoup4>=4.12.0",
+    "Pillow>=9.5.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/gemini/pdf_to_html_converter"
+"Bug Tracker" = "https://github.com/gemini/pdf_to_html_converter/issues"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
